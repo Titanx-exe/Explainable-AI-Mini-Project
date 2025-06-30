@@ -19,3 +19,8 @@ When installed manually, the project skips the dataset download step. Instead, i
 |-------|--------|
 | Number of nodes | 10,334  |  
 | Number of edges | 100,836  |  
+
+## Model Architecture and Explanability
+The model uses a GraphSAGE encoder—two SAGEConv layers—that aggregates neighbor information to learn embeddings for user and movie nodes. We convert it to a heterogeneous GNN via to_hetero, enabling separate transformations per node type. A bilinear decoder then takes a user embedding and a movie embedding, applies a learned weight matrix, and a sigmoid activation to predict the probability of a link between them.
+
+The Captum Explainer method assigns attribution scores to specific nodes and edges, illuminating how the GNN arrives at each edge prediction. By highlighting the most impactful graph components, it reveals which features and connections drive the model’s decisions.
