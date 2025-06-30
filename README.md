@@ -9,8 +9,9 @@ A heterogeneous GNN model for user movie link prediction with ~0.95 AUC, enhance
 - Offers transparent, trustworthy recommendations
 
 ## Execution
-1. Run the Files independently on Google Colab
-2. Remove the comments of the first cell on both files to make sure appropriate dependencies are installed
+Run the files independently on Google Colab
+1. Remove the comments of the first cell on both files to make sure appropriate dependencies are installed
+2. From the Runtime option, select Run all cells or Ctrl+F9
 
 ## Data Description
 When installed manually, the project skips the dataset download step. Instead, it relies on the MovieLens ratings data modeled as a heterogeneous graph that brings together user profiles, movie metadata, and genre information alongside the rating edges.  In total, the dataset spans 610 distinct users and a 20 column feature set for each movie, covering genre flags such as Action, Adventure, Animation, Children, Comedy, Crime, Documentary, Drama, Sci-Fi, and Thriller.
